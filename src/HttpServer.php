@@ -12,11 +12,13 @@ use Amp\Http\Server\SocketHttpServer;
 use InvalidArgumentException;
 use Psr\Log\LoggerInterface;
 use ReflectionClass;
+
 use function StringPhp\Utils\getClasses;
 
 class HttpServer implements RequestHandler, ErrorHandler
 {
     public readonly Router $router;
+
     public function __construct(
         public readonly LoggerInterface $logger,
         public readonly SocketHttpServer $server,

@@ -2,12 +2,7 @@
 
 namespace StringPhp\Router;
 
-use Amp\Http\HttpStatus;
-use Amp\Http\Server\ErrorHandler;
-use Amp\Http\Server\HttpErrorException;
 use Amp\Http\Server\Request;
-use Amp\Http\Server\RequestHandler;
-use Amp\Http\Server\Response;
 use Closure;
 
 class Router

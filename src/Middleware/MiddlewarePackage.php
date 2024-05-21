@@ -15,8 +15,10 @@ abstract readonly class MiddlewarePackage
 
     /**
      * @param class-string $class
-     * @return MiddlewarePackage[]
+     *
      * @throws InvalidArgumentException If the class provided does not exist
+     *
+     * @return MiddlewarePackage[]
      */
     public static function getFromClass(string $class): array
     {
@@ -32,7 +34,7 @@ abstract readonly class MiddlewarePackage
         }
 
         return array_map(
-            static fn(ReflectionAttribute $attribute): static => $attribute->newInstance(),
+            static fn (ReflectionAttribute $attribute): static => $attribute->newInstance(),
             $middlewarePackageAttributes
         );
     }

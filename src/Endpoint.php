@@ -16,7 +16,7 @@ abstract class Endpoint implements RegisterRoutes
         $requestAttributes = RequestAttribute::getFromClass(static::class);
 
         if ($requestAttributes === []) {
-            throw new LogicException(static::class . " does not have any RequestAttributes.");
+            throw new LogicException(static::class . ' does not have any RequestAttributes.');
         }
 
         foreach ($requestAttributes as $requestAttribute) {

@@ -59,7 +59,7 @@ class Route
 
         $this->steps = [...$middleware, $handler, ...$postware];
         $this->methods = is_array($methods) ?
-            array_filter($methods, static fn(mixed $method) => $method instanceof Method) :
+            array_filter($methods, static fn (mixed $method) => $method instanceof Method) :
             [$methods];
     }
 

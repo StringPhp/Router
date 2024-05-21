@@ -20,6 +20,7 @@ abstract class RequestAttribute
 
     /**
      * @param class-string $className
+     *
      * @return self[]
      */
     public static function getFromClass(string $className): array
@@ -35,6 +36,6 @@ abstract class RequestAttribute
             return [];
         }
 
-        return array_map(static fn($attribute) => $attribute->newInstance(), $attributes);
+        return array_map(static fn ($attribute) => $attribute->newInstance(), $attributes);
     }
 }

@@ -251,7 +251,7 @@ return $config->setRiskyAllowed(true)
         ->exclude([
             'vendor',
         ])
-        ->in(__DIR__ . '/php')
+        ->in(__DIR__ . '/src')
         ->name('*.php')
         ->ignoreDotFiles(true)
         ->ignoreVCS(true));
