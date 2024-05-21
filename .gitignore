@@ -1,0 +1,15 @@
+# Composer
+/vendor
+
+# VSCode
+.vscode/*
+
+# JetBrains IDEs
+.idea/*
+
+tools/HttpExceptionGeneration/HttpExceptions.md
+
+tools/HttpExceptions/HttpExceptions.md
+
+# PHP Unit
+.phpunit.cache

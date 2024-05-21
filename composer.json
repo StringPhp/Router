@@ -1,0 +1,38 @@
+{
+    "name": "stringphp/router",
+    "description": "Stringphp's router",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "StringPhp\\Router\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robert Snedeker",
+            "email": "rsnedeker20@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "amphp/amp": "^3.0",
+        "revolt/event-loop": "^1.0",
+        "amphp/http-server": "^3.3",
+        "monolog/monolog": "^3.6",
+        "amphp/log": "^2.0",
+        "stringphp/utils": "^v0.0.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.16"
+    },
+    "scripts": {
+        "fix": "php-cs-fixer fix --using-cache=no",
+        "fix:dry": "php-cs-fixer fix --using-cache=no --diff --dry-run"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": false
+        }
+    }
+}
