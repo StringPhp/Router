@@ -1785,16 +1785,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StringPhp/Utils.git",
-                "reference": "627aed86c5049966a1cb883d262840321220b798"
+                "reference": "bccecfaf504b42172c8ef74b5e8e23c29a32b1a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StringPhp/Utils/zipball/627aed86c5049966a1cb883d262840321220b798",
-                "reference": "627aed86c5049966a1cb883d262840321220b798",
+                "url": "https://api.github.com/repos/StringPhp/Utils/zipball/bccecfaf504b42172c8ef74b5e8e23c29a32b1a1",
+                "reference": "bccecfaf504b42172c8ef74b5e8e23c29a32b1a1",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.16"
             },
             "default-branch": true,
             "type": "library",
@@ -1819,9 +1822,9 @@
             "description": "StringPhp utility functions",
             "support": {
                 "issues": "https://github.com/StringPhp/Utils/issues",
-                "source": "https://github.com/StringPhp/Utils/tree/v0.0.1"
+                "source": "https://github.com/StringPhp/Utils/tree/v0.0.2"
             },
-            "time": "2024-05-21T03:44:41+00:00"
+            "time": "2024-05-21T03:58:47+00:00"
         }
     ],
     "packages-dev": [
