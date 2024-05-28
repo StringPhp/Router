@@ -24,7 +24,7 @@
         "amphp/http-server": "^3.3",
         "monolog/monolog": "^3.6",
         "amphp/log": "^2.0",
-        "stringphp/utils": "dev-main",
+        "stringphp/utils": "^v0.0.2",
         "httpsoft/http-message": "^1.1"
     },
     "require-dev": {
