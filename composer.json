@@ -1,6 +1,6 @@
 {
     "name": "stringphp/router",
-    "description": "Stringphp's router",
+    "description": "Router for amphp/http-server",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -24,10 +24,12 @@
         "amphp/http-server": "^3.3",
         "monolog/monolog": "^3.6",
         "amphp/log": "^2.0",
-        "stringphp/utils": "dev-main"
+        "stringphp/utils": "dev-main",
+        "httpsoft/http-message": "^1.1"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.16"
+        "friendsofphp/php-cs-fixer": "^3.16",
+        "pestphp/pest": "^2.34"
     },
     "scripts": {
         "fix": "php-cs-fixer fix --using-cache=no",

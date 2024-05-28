@@ -13,3 +13,4 @@ tools/HttpExceptions/HttpExceptions.md
 
 # PHP Unit
 .phpunit.cache
+.phpunit.result.cache
