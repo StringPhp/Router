@@ -5,8 +5,10 @@ namespace StringPhp\Router\Middleware;
 use Amp\Http\HttpStatus;
 use Amp\Http\Server\Response;
 use Attribute;
+use JsonException;
 use Override;
 use StringPhp\Router\Route;
+use function StringPhp\Router\jsonResponse;
 
 #[Attribute(Attribute::TARGET_CLASS)]
 readonly class JsonBody extends MiddlewarePackage
@@ -22,17 +24,23 @@ readonly class JsonBody extends MiddlewarePackage
         $body = $route->request->getBody()->read();
 
         if (empty($body)) {
-            return new Response(status: HttpStatus::BAD_REQUEST, body: 'Empty body, expected JSON.');
+            return jsonResponse([
+                'error' => 'Empty JSON body.'
+            ], HttpStatus::BAD_REQUEST);
         }
 
-        $json = json_decode($body, true);
-
-        if ($json === null) {
-            return new Response(status: HttpStatus::BAD_REQUEST, body: 'Invalid JSON body.');
+        try {
+            $json = json_decode($body, true, flags: JSON_THROW_ON_ERROR);
+        } catch (JsonException $e) {
+            return jsonResponse([
+                'error' => 'Invalid JSON body.',
+                'message' => $e->getMessage()
+            ], HttpStatus::BAD_REQUEST);
         }
+
 
         $route->setVar('body', $json);
 
-        return$route->next();
+        return $route->next();
     }
 }
