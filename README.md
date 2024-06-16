@@ -4,4 +4,4 @@
 composer require stringphp/router
 ```
 
-More documentation available at [stringphp.com](https://stringphp.com/router)
+More documentation available at [stringphp.com](https://stringphp.com/packages/router)
